@@ -81,7 +81,7 @@ import {
     async (email) => {
       const {
         data: { movies },
-      } = await axios.get(`http://localhost:5000/api/user/liked/${email}`);
+      } = await axios.get(`http://localhost:3030/api/user/liked/${email}`);
       return movies;
     }
   );
@@ -91,7 +91,7 @@ import {
     async ({ movieId, email }) => {
       const {
         data: { movies },
-      } = await axios.put("http://localhost:5000/api/user/remove", {
+      } = await axios.put("http://localhost:3030/api/user/remove", {
         email,
         movieId,
       });
